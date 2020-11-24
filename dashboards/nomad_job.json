@@ -54,7 +54,7 @@
         "bars": false,
         "dashLength": 10,
         "dashes": false,
-        "datasource": "${DS_PROMETHEUS}",
+        "datasource": "prometheus",
         "fill": 1,
         "gridPos": {
           "h": 6,
@@ -142,7 +142,7 @@
         "bars": false,
         "dashLength": 10,
         "dashes": false,
-        "datasource": "${DS_PROMETHEUS}",
+        "datasource": "prometheus",
         "fill": 1,
         "gridPos": {
           "h": 6,
@@ -230,7 +230,7 @@
         "bars": false,
         "dashLength": 10,
         "dashes": false,
-        "datasource": "${DS_PROMETHEUS}",
+        "datasource": "prometheus",
         "fill": 1,
         "gridPos": {
           "h": 6,
@@ -318,7 +318,7 @@
         "bars": false,
         "dashLength": 10,
         "dashes": false,
-        "datasource": "${DS_PROMETHEUS}",
+        "datasource": "prometheus",
         "fill": 1,
         "gridPos": {
           "h": 6,
@@ -410,7 +410,7 @@
         {
           "allValue": null,
           "current": {},
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": "prometheus",
           "hide": 0,
           "includeAll": false,
           "label": "DC",
@@ -430,7 +430,7 @@
         {
           "allValue": null,
           "current": {},
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": "prometheus",
           "hide": 0,
           "includeAll": true,
           "label": "Host",
