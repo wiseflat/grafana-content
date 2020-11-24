@@ -12,7 +12,6 @@ datasources:
   url: "http://prometheus.service.consul:9090"
   basicAuth: false
   isDefault: true
-  jsonData: '{"tlsAuth":false,"tlsAuthWithCACert":false,"tlsSkipVerify":true}'
   editable: false
 - name: "Prometheus"
   type: "prometheus"
@@ -20,5 +19,4 @@ datasources:
   url: "http://prometheus.service.consul:9090"
   basicAuth: false
   isDefault: false
-  jsonData: '{"tlsAuth":false,"tlsAuthWithCACert":false,"tlsSkipVerify":true}'
   editable: false
