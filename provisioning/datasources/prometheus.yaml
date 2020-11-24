@@ -6,17 +6,17 @@ deleteDatasources:
     orgId: 1
 
 datasources:
-- name: "prometheus"
-  type: "prometheus"
-  access: "proxy"
-  url: "http://prometheus.service.consul:9090"
-  basicAuth: false
-  isDefault: true
-  editable: false
-- name: "Prometheus"
-  type: "prometheus"
-  access: "proxy"
-  url: "http://prometheus.service.consul:9090"
-  basicAuth: false
-  isDefault: false
-  editable: false
+  - name: "prometheus"
+    type: "prometheus"
+    access: "proxy"
+    url: "http://prometheus.service.consul:9090"
+    basicAuth: false
+    isDefault: true
+    editable: false
+  - name: "Prometheus"
+    type: "prometheus"
+    access: "proxy"
+    url: "http://prometheus.service.consul:9090"
+    basicAuth: false
+    isDefault: false
+    editable: false

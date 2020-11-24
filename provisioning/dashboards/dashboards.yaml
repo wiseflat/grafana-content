@@ -1,11 +1,21 @@
 apiVersion: 1
 
 providers:
-- name: 'default'
-  orgId: 1
-  folder: ''
-  type: file
-  disableDeletion: false
-  editable: false
-  options:
-    path: /local/dashboards
+  - name: nomad
+    orgId: 1
+    folder: nomad
+    type: file
+    disableDeletion: false
+    editable: false
+    options:
+      path: /local/dashboards/nomad
+      foldersFromFilesStructure: true
+  - name: traefik
+    orgId: 1
+    folder: traefik
+    type: file
+    disableDeletion: false
+    editable: false
+    options:
+      path: /local/dashboards/traefik
+      foldersFromFilesStructure: true
