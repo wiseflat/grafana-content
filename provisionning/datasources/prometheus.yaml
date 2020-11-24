@@ -1,0 +1,24 @@
+apiVersion: 1
+deleteDatasources:
+  - name: Prometheus
+    orgId: 1
+  - name: prometheus
+    orgId: 1
+
+datasources:
+- name: "prometheus"
+  type: "prometheus"
+  access: "proxy"
+  url: "http://prometheus.service.consul:9090"
+  basicAuth: false
+  isDefault: true
+  jsonData: '{"tlsAuth":false,"tlsAuthWithCACert":false,"tlsSkipVerify":true}'
+  editable: false
+- name: "Prometheus"
+  type: "prometheus"
+  access: "proxy"
+  url: "http://prometheus.service.consul:9090"
+  basicAuth: false
+  isDefault: false
+  jsonData: '{"tlsAuth":false,"tlsAuthWithCACert":false,"tlsSkipVerify":true}'
+  editable: false
