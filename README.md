@@ -1,0 +1,1 @@
+This is just a simple repository with many grafana dashboards.
