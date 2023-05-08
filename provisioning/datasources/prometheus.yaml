@@ -21,11 +21,10 @@ datasources:
     basicAuth: false
     isDefault: false
     editable: false
-  # - name: "Prometheus"
-  #   type: "prometheus"
-  #   access: "proxy"
-  #   url: "http://prometheus.service.consul:9090"
-  #   basicAuth: false
-  #   isDefault: false
-  #   editable: false
-    
+  - name: "Loki"
+    type: "loki"
+    access: "proxy"
+    url: "http://loki.service.consul:3100"
+    basicAuth: false
+    isDefault: false
+    editable: false
