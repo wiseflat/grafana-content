@@ -1,26 +1,34 @@
 apiVersion: 1
-deleteDatasources: []
-  # - name: Prometheus
-  #   orgId: 1
-  # - name: prometheus
-  #   orgId: 1
 
 datasources:
-  - name: "prometheus"
-    type: "prometheus"
-    access: "proxy"
-    url: "http://prometheus.service.consul:9090"
+  - name: Mimir
+    uid: prometheus
+    type: prometheus
+    access: proxy
+    orgId: 1
+    url: http://mimir.service.consul:8080/prometheus
+    version: 1
     basicAuth: false
     isDefault: true
     editable: false
-    uid: prometheus
-  - name: "Metrics"
-    type: "prometheus"
-    access: "proxy"
-    url: "http://prometheus.service.consul:9090"
-    basicAuth: false
-    isDefault: false
-    editable: false
+    jsonData:
+      httpHeaderName1: "X-Scope-OrgID"
+      alertmanagerUid: "alertmanager"
+    secureJsonData:
+      httpHeaderValue1: "demo"
+  - name: Mimir Alertmanager
+    uid: alertmanager
+    type: alertmanager
+    access: proxy
+    orgId: 1
+    url: http://mimir.service.consul:8080/
+    version: 1
+    editable: true
+    jsonData:
+      httpHeaderName1: "X-Scope-OrgID"
+      implementation: "cortex"
+    secureJsonData:
+      httpHeaderValue1: "demo"
   - name: "Loki"
     type: "loki"
     access: "proxy"
